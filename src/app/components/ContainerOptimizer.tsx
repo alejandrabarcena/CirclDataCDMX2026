@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import estadioDigitalTwin from "../../imports/estadio-azteca-digital-twin.png";
 import { Sparkles, Move } from "lucide-react";
 import { useState, useRef } from "react";
 
@@ -73,11 +74,15 @@ export function ContainerOptimizer() {
           Ajuste IA
         </motion.button>
       </div>
-
-      <div
+            <div
         ref={mapRef}
-        className="relative w-full aspect-video bg-gradient-to-br from-emerald-100 via-blue-50 to-purple-50 rounded-xl overflow-hidden border-2 border-gray-300 mb-4"
+        className="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-gray-300 mb-4 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${estadioDigitalTwin})`,
+        }}
       >
+
+    
         <div className="absolute inset-0 opacity-30">
           <svg className="w-full h-full">
             <defs>
