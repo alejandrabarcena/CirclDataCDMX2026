@@ -50,7 +50,8 @@ export default function App() {
 
       <div className="min-h-screen p-4 sm:p-6 lg:p-8">
         <motion.div
-          className="mb-6 sm:mb-8 text-center"
+          id="dashboard"
+          className="mb-6 sm:mb-8 text-center scroll-mt-20"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -62,11 +63,15 @@ export default function App() {
               className="h-16 sm:h-24 w-auto"
             />
           </div>
-          <p className="text-slate-600 text-sm sm:text-base font-medium">Sistema Inteligente de Gestión de Residuos - Mundial 2026</p>
-          <p className="text-xs text-slate-500 mt-1">Inteligencia para la Economía Circular</p>
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
+            Sistema Inteligente de Gestión de Residuos - Mundial 2026
+          </p>
+          <p className="text-xs text-slate-500 mt-1">
+            Inteligencia para la Economía Circular
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6">
+        <div id="simulacion" className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 scroll-mt-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -95,7 +100,7 @@ export default function App() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6">
+        <div id="mapa" className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 scroll-mt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,7 +127,7 @@ export default function App() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6">
+        <div id="reportes" className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6 scroll-mt-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

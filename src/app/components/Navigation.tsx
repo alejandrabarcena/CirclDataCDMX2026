@@ -21,10 +21,12 @@ export function Navigation({ onNavigate, currentSection }: NavigationProps) {
   ];
 
   const handleItemClick = (id: string) => {
-    onNavigate(id);
-    setIsMenuOpen(false);
-  };
+  onNavigate(id);
+  setIsMenuOpen(false);
 
+  const section = document.getElementById(id);
+  section?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
   return (
     <>
       <nav className="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50 shadow-sm">
