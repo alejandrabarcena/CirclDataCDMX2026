@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { MapPin, Users, Calendar, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 
+import estadioAzteca from "../../imports/estadio-azteca.png";
+
 interface Venue {
   id: string;
   name: string;
@@ -9,7 +11,6 @@ interface Venue {
   x: number;
   y: number;
 }
-
 interface VenueSelectorProps {
   onVenueSelect: (venue: Venue) => void;
   selectedVenue: Venue | null;
@@ -30,7 +31,12 @@ export function VenueSelector({ onVenueSelect, selectedVenue }: VenueSelectorPro
         <h3 className="text-gray-800 text-base sm:text-lg font-medium">Selecciona el Recinto</h3>
       </div>
 
-      <div className="relative w-full aspect-video bg-gradient-to-br from-slate-700 via-slate-600 to-slate-500 rounded-xl overflow-hidden border-2 border-gray-300">
+     <div
+  className="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-gray-300 bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${estadioAzteca})`,
+  }}
+>
         <div className="absolute inset-0 opacity-20">
           <svg className="w-full h-full">
             <pattern id="venue-grid" width="30" height="30" patternUnits="userSpaceOnUse">
